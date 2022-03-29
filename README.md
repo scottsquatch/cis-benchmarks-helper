@@ -11,7 +11,7 @@ To install, simply just clone the files to the directory of your choosing. Perso
 ```bash
 INSTALL_DIR=~/.local/bin/cis-benchmarks-helper
 BRANCH=fedora-28
-mkdir -p $INSTALL_DIR && pushd $INSTALL_DIR && git clone https://github.com/scottsquatch/cis-benchmarks-helper.git && git branch "$BRANCH"
+mkdir -p $INSTALL_DIR && pushd $INSTALL_DIR && git clone https://github.com/scottsquatch/cis-benchmarks-helper.git . && git branch $BRANCH && popd
 unset INSTALL_DIR
 unset BRANCH
 ```
