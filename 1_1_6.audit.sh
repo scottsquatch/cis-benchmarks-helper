@@ -7,9 +7,9 @@ cmd="mount | grep -E '\s/var\s'"
 result=`eval $cmd | xargs`
 if [ -z "$result" ]
 then
-    echo "$cmd returned nothing, suggesting /var is not mounted on a separate partition"
+    echo "$cmd returned nothing, suggesting /var is not mounted on a separate partition, please fix manually"
     result=$EXIT_CODE_MANUAL
 else
-    echo "$cmd returned '$result', suggesting /var is mounted on a separate partition, please fix manually"
+    echo "$cmd returned '$result', suggesting /var is mounted on a separate partition"
 fi
 exit $result
